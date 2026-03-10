@@ -134,7 +134,7 @@ Deletar tópico
 
 DELETE /topicos/{id}
 
-🧪## Testes da API
+## 🧪 Testes da API
 
 Você pode testar os endpoints utilizando:
 
