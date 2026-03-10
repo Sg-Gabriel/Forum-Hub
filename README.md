@@ -115,14 +115,23 @@ Authorization: Bearer SEU_TOKEN
 ## 📌 Exemplos de endpoints
 
 Criar tópico
+
 POST /topicos
+
 Listar tópicos
+
 GET /topicos
+
 Detalhar tópico
+
 GET /topicos/{id}
+
 Atualizar tópico
+
 PUT /topicos/{id}
+
 Deletar tópico
+
 DELETE /topicos/{id}
 
 🧪## Testes da API
