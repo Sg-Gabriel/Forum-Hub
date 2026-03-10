@@ -1,4 +1,4 @@
-package hub.forum.api.security;
+package hub.forum.api.infra.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -25,8 +25,9 @@ public class SecurityConfigurations {
         return  http.csrf(csrf -> csrf.disable())
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> {
-                    req.requestMatchers("/login").permitAll()
-                            .requestMatchers("/usuarios").permitAll();
+                    req.requestMatchers("/login").permitAll();
+                    req.requestMatchers("/usuarios").permitAll();
+                    req.requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll();
                     req.anyRequest().authenticated();
                 }).addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();

@@ -1,4 +1,4 @@
-package hub.forum.api.security;
+package hub.forum.api.infra.security;
 
 import hub.forum.api.repository.UsuarioRepository;
 import hub.forum.api.service.TokenService;
