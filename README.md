@@ -61,7 +61,7 @@ Cada camada possui uma responsabilidade específica:
 
 # ⚙️ Como executar o projeto
 
-###1️⃣ Clone o repositório
+### 1️⃣ Clone o repositório
 
 ``bash
 git clone https://github.com/Sg-Gabriel/Forum-Hub.git
@@ -88,7 +88,7 @@ Ou:
 
 mvn spring-boot:run
 
-# 📖 Documentação da API
+## 📖 Documentação da API
 
 Após iniciar o projeto, acesse:
 
@@ -98,7 +98,7 @@ ou
 
 http://localhost:8080/swagger-ui/index.html
 
-#🔑 Autenticação
+## 🔑 Autenticação
 
 A API utiliza JWT (JSON Web Token) para autenticação.
 
@@ -112,7 +112,7 @@ O token deve ser enviado no header das requisições
 
 Authorization: Bearer SEU_TOKEN
 
-📌 Exemplos de endpoints
+## 📌 Exemplos de endpoints
 Criar tópico
 POST /topicos
 Listar tópicos
@@ -124,7 +124,7 @@ PUT /topicos/{id}
 Deletar tópico
 DELETE /topicos/{id}
 
-🧪 Testes da API
+🧪## Testes da API
 
 Você pode testar os endpoints utilizando:
 
