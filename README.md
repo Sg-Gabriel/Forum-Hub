@@ -113,6 +113,7 @@ O token deve ser enviado no header das requisições
 Authorization: Bearer SEU_TOKEN
 
 ## 📌 Exemplos de endpoints
+
 Criar tópico
 POST /topicos
 Listar tópicos
