@@ -6,7 +6,7 @@ O projeto permite que usuários autenticados criem, visualizem, atualizem e remo
 
 A aplicação foi desenvolvida utilizando boas práticas de desenvolvimento backend, incluindo arquitetura em camadas, autenticação com JWT, versionamento de banco com Flyway e persistência com JPA/Hibernate.
 
-🚀 Tecnologias utilizadas
+🚀 Tecnologias Utilizadas
 
 Java 17
 
@@ -74,8 +74,8 @@ O token deve ser enviado nas requisições protegidas
 Exemplo de header:
 
 Authorization: Bearer SEU_TOKEN
-📌 Endpoints principais
-Autenticação
+📌 Endpoints Principais
+🔑 Autenticação
 Login
 POST /login
 
@@ -85,7 +85,7 @@ Body:
   "login": "usuario@email.com",
   "senha": "123456"
 }
-Tópicos
+💬 Tópicos
 Criar tópico
 POST /topicos
 Listar tópicos
@@ -96,12 +96,12 @@ Atualizar tópico
 PUT /topicos/{id}
 Deletar tópico
 DELETE /topicos/{id}
-⚙️ Como executar o projeto
-1 Clonar o repositório
+⚙️ Como Executar o Projeto
+1️⃣ Clonar o repositório
 git clone https://github.com/Sg-Gabriel/Forum-Hub.git
-2 Entrar na pasta
+2️⃣ Entrar na pasta
 cd Forum-Hub
-3 Configurar banco de dados
+3️⃣ Configurar banco de dados
 
 No arquivo:
 
@@ -112,7 +112,7 @@ Configure suas credenciais:
 spring.datasource.url=jdbc:mysql://localhost/forumhub
 spring.datasource.username=root
 spring.datasource.password=sua_senha
-4 Executar a aplicação
+4️⃣ Executar a aplicação
 mvn spring-boot:run
 
 A aplicação iniciará em:
@@ -128,9 +128,9 @@ Insomnia
 
 Swagger (caso configurado)
 
-📚 Conceitos aplicados
+📚 Conceitos Aplicados
 
-Durante o desenvolvimento deste projeto foram aplicados:
+Durante o desenvolvimento deste projeto foram utilizados:
 
 Desenvolvimento de APIs REST
 
@@ -148,5 +148,5 @@ Migração de banco com Flyway
 
 Gabriel Souza
 
-GitHub
+GitHub:
 https://github.com/Sg-Gabriel
