@@ -61,13 +61,13 @@ Cada camada possui uma responsabilidade específica:
 
 # ⚙️ Como executar o projeto
 
-### 1️⃣ Clone o repositório
+###1️⃣ Clone o repositório
 
 ```bash
 git clone https://github.com/Sg-Gabriel/Forum-Hub.git
-2️⃣ Entre na pasta do projeto
+###2️⃣ Entre na pasta do projeto
 cd Forum-Hub
-3️⃣ Configure o banco de dados
+###3️⃣ Configure o banco de dados
 
 No arquivo:
 
@@ -78,7 +78,7 @@ Configure suas credenciais:
 spring.datasource.url=jdbc:mysql://localhost/forumhub
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
-4️⃣ Execute a aplicação
+###4️⃣ Execute a aplicação
 
 Via Maven:
 
@@ -87,7 +87,7 @@ Via Maven:
 Ou:
 
 mvn spring-boot:run
-📖 Documentação da API
+#📖 Documentação da API
 
 Após iniciar o projeto, acesse:
 
@@ -96,7 +96,7 @@ http://localhost:8080/swagger-ui.html
 ou
 
 http://localhost:8080/swagger-ui/index.html
-🔑 Autenticação
+#🔑 Autenticação
 
 A API utiliza JWT (JSON Web Token) para autenticação.
 
@@ -130,7 +130,7 @@ Insomnia
 
 Swagger UI
 
-📚 Aprendizados
+##📚 Aprendizados
 
 Durante o desenvolvimento deste projeto foram praticados:
 
@@ -146,9 +146,9 @@ Validação de dados
 
 Segurança com Spring Security
 
-👨‍💻 Autor
+##👨‍💻 Autor
 
-Gabriel Souza
+Gabriel de Souza Guimarâes
 
 GitHub
 https://github.com/Sg-Gabriel
