@@ -1,91 +1,115 @@
-💬 Forum Hub API
+# 🚀 Forum Hub API
 
-API REST desenvolvida com Java e Spring Boot para gerenciamento de tópicos de um fórum.
+API REST desenvolvida em **Java com Spring Boot** para gerenciamento de um fórum de discussão.  
+A aplicação permite criar, listar, atualizar e excluir **tópicos**, além de gerenciar **usuários e autenticação**, seguindo boas práticas de desenvolvimento backend.
 
-O projeto permite que usuários autenticados criem, visualizem, atualizem e removam tópicos dentro de um sistema de discussão.
+Este projeto foi desenvolvido como prática de backend focado em **Spring Boot, JPA, segurança e arquitetura de APIs REST**.
 
-A aplicação foi desenvolvida utilizando boas práticas de desenvolvimento backend, incluindo arquitetura em camadas, autenticação com JWT, versionamento de banco com Flyway e persistência com JPA/Hibernate.
+---
 
-🚀 Tecnologias Utilizadas
+# 📌 Funcionalidades
 
-Java 17
+✔️ Cadastro de usuários  
+✔️ Autenticação com Spring Security  
+✔️ CRUD completo de tópicos  
+✔️ Listagem e detalhamento de tópicos  
+✔️ Atualização de informações  
+✔️ Exclusão de tópicos  
+✔️ Validação de dados  
+✔️ Integração com banco de dados  
+✔️ API documentada com Swagger (se estiver usando)
 
-Spring Boot
+---
 
-Spring Security
+# 🛠️ Tecnologias utilizadas
 
-Spring Data JPA
+- **Java 17**
+- **Spring Boot**
+- **Spring Security**
+- **Spring Data JPA**
+- **Hibernate**
+- **MySQL**
+- **Maven**
+- **Flyway** (migração de banco)
+- **JWT** (autenticação)
+- **Swagger / OpenAPI** (documentação da API)
 
-Hibernate
+---
 
-JWT (JSON Web Token)
+# 📂 Estrutura do Projeto
 
-Flyway (migração de banco de dados)
 
-MySQL
-
-Maven
-
-📂 Estrutura do Projeto
-src/main/java/hub/forum/api
-
-├── config
+src
 ├── controller
-├── domain
-│   ├── topico
-│   └── usuario
+├── service
 ├── repository
+├── model
+├── dto
 ├── security
-└── service
-Descrição das camadas
+└── config
 
-Controller
 
-Responsável por receber requisições HTTP e retornar respostas da API.
+Cada camada possui uma responsabilidade específica:
 
-Domain
+- **Controller** → Recebe as requisições HTTP  
+- **Service** → Contém a lógica de negócio  
+- **Repository** → Comunicação com o banco de dados  
+- **DTO** → Transferência de dados entre camadas  
+- **Security** → Configuração de autenticação e autorização
 
-Contém as entidades da aplicação e os DTOs responsáveis pela transferência de dados.
+---
 
-Repository
+# ⚙️ Como executar o projeto
 
-Camada responsável pela comunicação com o banco de dados utilizando Spring Data JPA.
+### 1️⃣ Clone o repositório
 
-Service
+```bash
+git clone https://github.com/Sg-Gabriel/Forum-Hub.git
+2️⃣ Entre na pasta do projeto
+cd Forum-Hub
+3️⃣ Configure o banco de dados
 
-Contém a lógica de negócio da aplicação.
+No arquivo:
 
-Security
+application.properties
 
-Responsável pela autenticação e autorização utilizando Spring Security e JWT.
+Configure suas credenciais:
 
-🔐 Autenticação
+spring.datasource.url=jdbc:mysql://localhost/forumhub
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+4️⃣ Execute a aplicação
+
+Via Maven:
+
+./mvnw spring-boot:run
+
+Ou:
+
+mvn spring-boot:run
+📖 Documentação da API
+
+Após iniciar o projeto, acesse:
+
+http://localhost:8080/swagger-ui.html
+
+ou
+
+http://localhost:8080/swagger-ui/index.html
+🔑 Autenticação
 
 A API utiliza JWT (JSON Web Token) para autenticação.
 
-Fluxo de autenticação:
+Fluxo:
 
-O usuário envia login e senha
+Usuário faz login
 
-A API retorna um token JWT
+Recebe um token JWT
 
-O token deve ser enviado nas requisições protegidas
-
-Exemplo de header:
+O token deve ser enviado no header das requisições
 
 Authorization: Bearer SEU_TOKEN
-📌 Endpoints Principais
-🔑 Autenticação
-Login
-POST /login
-
-Body:
-
-{
-  "login": "usuario@email.com",
-  "senha": "123456"
-}
-💬 Tópicos
+📌 Exemplos de endpoints
 Criar tópico
 POST /topicos
 Listar tópicos
@@ -96,57 +120,35 @@ Atualizar tópico
 PUT /topicos/{id}
 Deletar tópico
 DELETE /topicos/{id}
-⚙️ Como Executar o Projeto
-1️⃣ Clonar o repositório
-git clone https://github.com/Sg-Gabriel/Forum-Hub.git
-2️⃣ Entrar na pasta
-cd Forum-Hub
-3️⃣ Configurar banco de dados
+🧪 Testes da API
 
-No arquivo:
-
-src/main/resources/application.properties
-
-Configure suas credenciais:
-
-spring.datasource.url=jdbc:mysql://localhost/forumhub
-spring.datasource.username=root
-spring.datasource.password=sua_senha
-4️⃣ Executar a aplicação
-mvn spring-boot:run
-
-A aplicação iniciará em:
-
-http://localhost:8080
-🧪 Testando a API
-
-Ferramentas recomendadas:
+Você pode testar os endpoints utilizando:
 
 Postman
 
 Insomnia
 
-Swagger (caso configurado)
+Swagger UI
 
-📚 Conceitos Aplicados
+📚 Aprendizados
 
-Durante o desenvolvimento deste projeto foram utilizados:
+Durante o desenvolvimento deste projeto foram praticados:
 
-Desenvolvimento de APIs REST
-
-Arquitetura em camadas
+Construção de APIs REST
 
 Autenticação com JWT
 
+Arquitetura em camadas
+
+Persistência com JPA / Hibernate
+
+Validação de dados
+
 Segurança com Spring Security
-
-Persistência com JPA/Hibernate
-
-Migração de banco com Flyway
 
 👨‍💻 Autor
 
 Gabriel Souza
 
-GitHub:
+GitHub
 https://github.com/Sg-Gabriel
